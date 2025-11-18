@@ -99,7 +99,16 @@ def main() -> None:
         print(f"Score => Wins: {wins} | Losses: {losses} | Draws: {draws}\n")
         round_num += 1
 
-    print("Thanks for playing! Goodbye. 👋")
+    # Display final winner
+    print("\n=== Game Over ===")
+    print(f"Final Score => Wins: {wins} | Losses: {losses} | Draws: {draws}")
+    if wins > losses:
+        print("🎉 Congratulations! You are the overall winner!")
+    elif losses > wins:
+        print("💻 Computer wins overall. Better luck next time!")
+    else:
+        print("🤝 It's a tie overall. Well played!")
+    print("\nThanks for playing! Goodbye. 👋")
 
 
 if __name__ == "__main__":  # pragma: no cover
